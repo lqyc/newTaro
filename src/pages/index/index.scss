@@ -1,0 +1,47 @@
+page {
+  padding: 10px 35px;
+  box-sizing: border-box;
+}
+.container {
+  .headBox {
+    // width: 90%;
+    margin: 40px auto 40px;
+    height: 110px;
+    background: #FFFFFF;
+    box-shadow: 0 22px 49px 0 rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    font-family: PingFangSC-Light;
+    font-size: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    .headIcon {
+      width: 80px;
+      height: 80px;
+      margin-right: 20px;
+    }
+  }
+
+  .forecastBox {
+    height: 100px;
+    margin: 40px auto 40px;
+
+    .forecastTip {
+      text-indent: 10px;
+      font-size: 36px;
+    }
+
+    .weatherBtn {
+      font-size: 30px;
+      border-radius: 60px;
+      padding: 10px 42px;
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+  .countedCollect {
+    font-size: 25px;
+    margin-left: 20px;
+  }
+}

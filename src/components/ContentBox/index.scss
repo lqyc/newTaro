@@ -1,0 +1,26 @@
+.summaryBox {
+    background: #FFFFFF;
+    box-shadow: 0 22px 59px 0 rgba(0,0,0,0.09);
+    border-radius: 8px;
+    margin: 40px auto 40px;
+    padding:24px;
+    box-sizing: border-box;
+    .summaryInfo {
+        font-family: PingFangSC-Light;
+        font-size: 28px;
+        max-height: 310px;
+        color: #343339; 
+        overflow: hidden;
+        line-height: 40px;
+        margin-bottom: 14px;
+    }
+    .summaryTime {
+        font-family: Helvetica;
+        font-size: 22px;
+        color: #DDDDDD;
+        text-align: right; 
+    }
+}
+.content-Class {
+    width: 90%;
+}

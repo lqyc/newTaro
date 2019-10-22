@@ -1,0 +1,98 @@
+.articleBox {
+  background: #FFFFFF;
+  box-shadow: 0 22px 49px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  margin: 40px auto 25px;
+  padding: 36px 36px 20px;
+  box-sizing: border-box;
+  position: relative;
+  .articleHeadBox {
+    height: 60px;
+    margin-bottom: 10px;
+    .title {
+      width: 72%;
+      font-family:PingFangSC-Light,Helvetica;
+      font-size: 32px;
+      color: #4E4A65;
+    }
+
+    .time {
+      font-family: Helvetica;
+      font-size: 22px;
+      color: #DDDDDD;
+    }
+  }
+
+  .articleInfo {
+    font-family: Helvetica,PingFangSC-Light;
+    font-size: 25px;
+    max-height: 310px;
+    color: #bdbcbc;
+    overflow: hidden;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
+  .imgListBox {
+    display: flex;
+    flex-direction: row;
+    color:white;
+    font-size: 24px;
+    line-height: 90px;
+    margin:0 0 30px -54px;
+    .imgInfo {
+        flex: 0 1 160px;
+        height: 90px;
+        border-radius: 8px;
+        box-shadow: 2px 14px 20px 0 rgba(79,74,102,0.16);
+    }
+    .secondImg {
+        margin:0 30px
+    }
+    .imgInfo {
+        text-align: center;
+        background: #97DFEA;
+    }
+  }
+  .socialBox {
+      display: flex;
+      justify-content:flex-end;
+      .iconInfo {
+          width: 40px;
+          margin: 5px 2px 0px 15px;
+          vertical-align: text-top;
+          height: 35px;
+      }
+      .IconBox {
+        height: 60px;
+        padding-top: 10px;
+      }
+      .socialInfo {
+          font-size: 20px;
+          color:#ddd;
+        .number {
+          margin-left: 4px;
+        }
+      }
+  }
+}
+// 单行省略
+.textOverflow1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  // 两边对齐
+  .flexBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  // 三行省略
+.textOverflow3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+ display: -webkit-box;
+  -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

@@ -1,0 +1,66 @@
+// 主色调-粉： #F485B5
+// 主色调蓝：#71B1FB
+// 导航蓝：#82A8F9
+// 导航绿 #97DFEA
+
+.textCenter {
+  text-align: center
+}
+.colorBlack {
+    color: #262323;
+}
+.colorGray {
+  color:#bdbcbc;
+}
+.imgBgColor {
+  background: #97DFEA;   
+}
+.activeBtn {
+    border-radius: 8px;
+  color: #fff;
+  background-image: linear-gradient(-90deg, #FEE140 0%, #FEDA45 6%, #FB7F8E 87%, #FA7893 92%, #FA709A 100%);
+  background-image: linear-gradient(90deg, #FD95BB 0%, #B0D5F4 87%, #A4DFFD 100%);
+}
+.shareBtn {
+  z-index: 20;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 28px;
+  border:none;
+  border-radius: 50%;
+  outline: none;
+  box-shadow:0rpx 2rpx 20rpx 10rpx #fff;
+}
+.imgRadius50 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.colorPink {
+  color: #F485B5;
+}
+
+// 单行省略
+.textOverflow1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  // 两边对齐
+  .flexBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+// 水平垂直居中flex
+.flexCenterXY {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

@@ -1,0 +1,29 @@
+.SwiperBox {
+    margin:40px 0 0px 0;
+    height: 160px;
+    border-bottom: 1px solid #97DFEA;
+  .swiperItem {
+    height: 150px;
+    .swiperView {
+        width: 200px;
+        height: 130px;
+        line-height: 130px;
+        text-align: center;
+        font-family: Helvetica;
+        font-size: 30px;
+        border-radius: 8px;
+    }
+    .defaultSwiper {
+        color: #768196;
+        background: #FFFFFF;
+        border-left:1px solid #FD95BB;
+        box-shadow: 4px 12px 26px  0 rgba(0, 0, 0, 0.10);
+      }
+    
+      .activeSwiper {
+        color: #fff;
+        background: #FD95BB;
+        box-shadow: 4px 12px 26px 0 rgba(253, 149, 187, 0.52);
+      }
+  }
+}

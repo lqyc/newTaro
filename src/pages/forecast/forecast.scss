@@ -1,0 +1,138 @@
+page {
+    height: 100%;
+  background: #97DFEA;    
+  }
+  
+  .forecast {
+    height: 1300px;
+    width: 100%;
+    color: #fff;
+    // background:linear-gradient(120deg, #2c7cf7, #2c7aa0);
+  background: #97DFEA;
+  
+    .top {
+      margin-bottom: 80px;
+      position: relative;
+      padding:0px 20px;
+    }
+  
+    .city {
+      font-size: 60px;
+      text-align: center;
+      padding-bottom:30px;
+      padding-top:50px;
+    }
+  
+    .currentWind {
+      text-align:center;
+      font-size: 100px;
+    }
+  
+    .weatherDesc {
+      text-align: center;
+      font-size:25px;
+      // color: #e62121;
+    }
+  
+    .temperature {
+      font-size: 30px;
+      text-align: center;
+    }
+  
+    .windDesc {
+      font-size:25px;
+      text-align:center;
+    }
+  
+    .time {
+      position: absolute;
+      top: 10px;
+      left: 40px;
+      font-size: 30px;
+      color:#777;
+    }
+  
+    .padding {
+      padding: 10px 0;
+    }
+  
+    .list {
+      padding:0px 20px;
+  
+      .list-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        // border-top: 1px solid #eee;
+        padding: 10px 0px;
+  
+        image {
+          width: 50px;
+          height: 40px;
+        }
+      }
+    }
+    .backHome {
+      border-radius: 8px;
+  color: #fff;
+  background: #71B1FB;
+      width: 200px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 30px;
+      margin:30px auto;
+    }
+    .scrollView {
+      margin-top:50px;
+  
+      .card {
+        padding: 0px 20px;
+        height: 400px!important;
+        min-width: 1750px;
+        display: flex;
+        align-items: center;
+  
+        .card-item {
+          width: 350px;
+          height: 320px;
+          background: #71B1FB;
+          margin-right: 15px;
+          border-radius: 5%;
+          text-align: center;
+          box-shadow:0px 2px 1px #555;
+          overflow: hidden;
+          .title {
+            margin-bottom:20px;
+            padding-top:40px;
+            // color: red;
+          }
+  
+          .desc {
+            font-size:25px;
+            padding:0px 20px;
+          }
+        }
+      }
+    }
+  
+    .button {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      line-height: 100px;
+      background: #fff;
+      color: #777;
+      position: fixed;
+      right: 50px;
+      bottom: 80px;
+      font-size: 25px;
+      padding: 0px;
+      z-index: 100;
+      border: 0px;
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+  }

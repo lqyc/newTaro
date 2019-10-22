@@ -1,0 +1,23 @@
+
+.container {
+    .tips {
+        color:#FA7893;
+        margin: 40px;
+    }
+    .btnGroup {
+        padding: 0 90px;
+        .contactBtn {
+            width: 260px;
+            height: 78px;
+            line-height: 78px;
+            font-size: 30px;
+            margin:70px auto;
+            border-radius: 40px;
+        }
+    }
+    .articleWrap {
+        margin: 20px auto;
+        width: 90%;
+        box-sizing: border-box;
+    }
+}
