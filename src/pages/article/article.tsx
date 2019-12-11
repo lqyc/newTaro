@@ -45,7 +45,7 @@ export default class Article extends Component<Props,State> {
     })
     setTimeout(function () {
       Taro.hideLoading()
-    }, 2000)    
+    }, 1000)    
   }
   componentDidMount () { } 
   componentWillUnmount () {} 
@@ -118,7 +118,7 @@ export default class Article extends Component<Props,State> {
         }
         <View className="flexBetween btnGroup">
           {process.env.TARO_ENV === 'weapp' && 
-            <Button  className="activeBtn textCenter contactBtn" open-type="contact">聊一聊？</Button>
+            <Button  className="activeBtn textCenter contactBtn" open-type="contact">说点什么</Button>
           }
         </View>
         <PopBox position="bottom" animation="slideDown" 

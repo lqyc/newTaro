@@ -9,7 +9,7 @@ export default class Guide extends Component {
   config: Config = {
     backgroundTextStyle: 'light',
     navigationBarTextStyle: 'black',
-    navigationBarTitleText: 'welcome',
+    navigationBarTitleText: 'Q小予',
     navigationStyle: 'custom'
   }
 

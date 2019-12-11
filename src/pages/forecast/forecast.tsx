@@ -3,6 +3,8 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text, ScrollView,Button,Image,Navigator} from '@tarojs/components'
 import ShareBox from '../../components/ShareBox'
 import { Bmap } from '../../utils/util'
+import { sceneryImg } from '../../utils/common'
+import PopBox from '../../components/PopBox'
 import './forecast.scss'
 
 // #region 书写注意
@@ -40,7 +42,8 @@ class ForeCast extends Component {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    navigationBarTitleText: '天气小贴士'
+    navigationBarTitleText: '天气小贴士',
+    navigationBarBackgroundColor: '#069'
   }
 
   constructor (props) {
@@ -57,17 +60,17 @@ class ForeCast extends Component {
 
   componentDidMount() {
     this.weather();
-  }
-
-  componentWillUnmount () { }
-
-  componentDidShow () {
     Taro.showLoading({
       title: '加载中'
     })
     setTimeout(function () {
       Taro.hideLoading()
     }, 2500)  
+  }
+
+  componentWillUnmount () { }
+
+  componentDidShow () {
   }
 
   componentDidHide () { }
@@ -103,13 +106,14 @@ class ForeCast extends Component {
   }
   onShareAppMessage() {
     return {
-      title: '你若安好，便是晴天~'
+      title: '你若安好，便是晴天~',
+      imageUrl: sceneryImg
     }
   }
 
   render () {
     let {dataInfo,openSetting,showShareBox } =this.state
-    const cardType:string = 'weather'
+    const cardType:string ='weather'
     return (
       <View className='forecast'>
         {/* 头部内容 */}
@@ -133,7 +137,6 @@ class ForeCast extends Component {
               {dataInfo.currentWeather[0].arrDate[1]}
             </View>
             <View>
-              {/* <Image src="../../static/image/position-icon.png" /> */}
               {dataInfo.currentWeather[0].currentCity}
             </View>
           </View>
@@ -169,7 +172,17 @@ class ForeCast extends Component {
         { process.env.TARO_ENV === 'weapp' &&
           <Button className="shareBtn activeBtn" hoverClass="none" onClick={this.shareImg.bind(this)}>分享</Button> 
         }
-        {showShareBox &&process.env.TARO_ENV === 'weapp' && <ShareBox closeShareBox={this.closeShareBox.bind(this)} openSetting={openSetting} toOpenSetting={this.toOpenSetting.bind(this)} cardType={cardType}/>}        
+        <PopBox position="bottom" animation="slideDown" 
+              showPop={showShareBox} 
+              closePopBox={this.closeShareBox.bind(this)}>
+          { process.env.TARO_ENV === 'weapp' && 
+           <ShareBox closeShareBox={this.closeShareBox.bind(this)} 
+                     openSetting={openSetting} 
+                     toOpenSetting={this.toOpenSetting.bind(this)}
+                     cardType={cardType}
+          />            
+          }
+        </PopBox>       
     </View>
     )
   }

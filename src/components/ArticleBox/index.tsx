@@ -1,6 +1,6 @@
 import Taro , { Component } from '@tarojs/taro';
 import { View, Text, Image,Navigator} from '@tarojs/components';
-import { collectIcon,CombinedIcon,collectIconGray } from '../../utils/common'
+import { collectIcon,collectIconGray } from '../../utils/common'
 import { connect } from '@tarojs/redux'
 import { essayCollect, cancelCollect } from '../../actions/articleAction'
 import './index.scss'
@@ -29,13 +29,14 @@ export default class ArticleBox extends Component<IProps> {
   componentDidCatchError () {} 
   componentDidNotFound () {} 
   toCollect(ifCollect:boolean,id:number) {
-    let toast:string = !ifCollect?`您有${this.props.essayData.collected+1}篇喜欢的文章了哟~`:'为什么不喜欢了呢？'
+    const {collected} = this.props.essayData
+    let toast:string = !ifCollect?`您有${collected+1}篇喜欢的文章了哟~`:'为什么不喜欢了呢？'
     Taro.showToast({
       title: toast,
       duration: 1800,
       icon: 'none'
     })
-    if (ifCollect && this.props.essayData.collected>0) {
+    if (ifCollect && collected>0) {
       this.props.cancelCollect(id);
     } else if (!ifCollect){
        this.props.essayCollect(id)
@@ -75,10 +76,10 @@ export default class ArticleBox extends Component<IProps> {
              <Image src={articleList.collect ?collectIcon:collectIconGray} 
                  className="iconInfo"/>
           </View>
-           <View  className="socialInfo IconBox" onClick={()=>this.toComment(articleList.webView)}>
+           {/* <View  className="socialInfo IconBox" onClick={()=>this.toComment(articleList.webView)}>
              <Image src={CombinedIcon} className="iconInfo"/> 
              <Text className="number">{articleList.comment}</Text>
-           </View>
+           </View> */}
         </View>
       </View>
     );

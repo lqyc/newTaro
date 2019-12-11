@@ -42,7 +42,7 @@ export default class Index extends Component<Props,State> {
     })
     setTimeout(function () {
       Taro.hideLoading()
-    }, 2000)    
+    }, 1000)    
   }
 
   componentDidHide () {

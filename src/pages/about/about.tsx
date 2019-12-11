@@ -47,7 +47,6 @@ export default class About extends Component<Props,State> {
        <View className="profileBox">
        <View className="profileHeadBox flexBetween">
        <Text className="headLeftTip">Profile</Text>
-       {/* <Text className="headRightTip">login</Text> */}
       </View>
         <View className="proAvatar textCenter"><Image src={avatar} className="imgRadius50"/> </View>      
          <View className="proUserName textCenter">Q小予</View>
@@ -61,7 +60,7 @@ export default class About extends Component<Props,State> {
         <ContentBox tipInfo={tipInfo} contentPropsClass = {contentPropsClass}/>
         <Image src={colorWavy} className="colorWavy"/>
         <ContentBox tipInfo={otherTip} contentPropsClass = {contentPropsClass}/>
-        {process.env.TARO_ENV === 'weapp' && <Button className="activeBtn contactBtn textCenter" open-type="contact">聊一聊？</Button>}
+        {process.env.TARO_ENV === 'weapp' && <Button className="activeBtn contactBtn textCenter" open-type="contact">嘀嘀咕咕</Button>}
       </View>
     )
   }
